@@ -27,13 +27,7 @@ iSight 是一个旨在提供实时舆情监控、情感分析和热点预测的�
 5.  **选择舆情 (Select Sentiment)**:
     *   提供舆情搜索和概览功能，可能用于更细致的舆情内容筛选和分析。
     *   对应文件: <mcfile name="select_sentiment.html" path="d:\赛事\2025年\第五届长三角青少年人工智能奥林匹克挑战赛\“少年开发者”项目（5.31截止）\Code\web\select_sentiment.html"></mcfile>
-
-## 技术栈与数据源
-
-*   **前端**: HTML, CSS, JavaScript (各页面均有对应的 `.html`, `.css`, `.js` 文件，例如 <mcfile name="style.css" path="d:\赛事\2025年\第五届长三角青少年人工智能奥林匹克挑战赛\“少年开发者”项目（5.31截止）\Code\web\style.css"></mcfile>, <mcfile name="script.js" path="d:\赛事\2025年\第五届长三角青少年人工智能奥林匹克挑战赛\“少年开发者”项目（5.31截止）\Code\web\script.js"></mcfile> 等)
-*   **数据采集**: 项目包含Go脚本用于从主流社交媒体平台（如抖音、头条、微博）抓取热搜数据。
-    *   位于 <mcfolder name="test" path="d:\赛事\2025年\第五届长三角青少年人工智能奥林匹克挑战赛\“少年开发者”项目（5.31截止）\Code\test"></mcfolder> 目录下，例如 <mcfile name="weibo_hot_search_scraper.py" path="d:\赛事\2025年\第五届长三角青少年人工智能奥林匹克挑战赛\“少年开发者”项目（5.31截止）\Code\test\weibo_hot_search_scraper.py"></mcfile>。
-
+    
 ## 项目目标
 
 iSight 旨在为用户提供一个强大而直观的工具，以应对复杂多变的舆论环境，辅助决策，并有效管理品牌声誉或社会事件。
