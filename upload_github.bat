@@ -1,5 +1,5 @@
 git add .
-git commit -m "由高峰君主上传"
+git commit -m "commit from %date% %time%"
 git pull origin main --allow-unrelated-histories
 git push origin main
 pause
