@@ -1,0 +1,252 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* 减少与菜单的间距 */
+    padding-left: 15px; /* 调整左内边距以更好地对齐菜单项 */
+    /* height: 50px; */ /* 可以设定一个固定高度以便垂直居中图片 */
+    justify-content: flex-start; /* 确保logo靠左 */
+}
+
+.logo img {
+    height: 120px; /* 高度自动调整以保持宽高比 */
+    width: 150px;  /* 调整logo的宽度 */
+    max-width: 100%; /* 防止图片过宽溢出 */
+    margin-right: 0; /* 移除右边距，因为没有文字了 */
+    /* 临时占位符样式 */
+    background-color: #ddd;
+    border-radius: 5px; /* 可以调整为轻微圆角或移除，根据实际logo调整 */
+    display: inline-block;
+}
+
+.logo span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin-bottom: 15px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu li a::before {
+    content: '■';
+    margin-right: 10px;
+    color: #bdc3c7; /* 灰色方块 */
+}
+
+.menu li.active a {
+    background-color: #e9ecef; /* 浅灰色背景 */
+    color: #007bff; /* 蓝色文字 */
+}
+
+.menu li.active a::before {
+    color: #007bff; /* 激活状态的蓝色方块 */
+}
+
+.menu li a:hover {
+    background-color: #f8f9fa;
+    color: #0056b3;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: #ffffff;
+    overflow-y: auto;
+}
+
+.main-header h1 {
+    font-size: 32px;
+    color: #000000;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.dashboard-widgets {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.widget-row {
+    display: flex;
+    gap: 20px;
+}
+
+.widget {
+    background-color: #ffffff;
+    /* padding: 20px; */
+    /* border-radius: 8px; */
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.05); */
+    flex: 1;
+}
+
+.widget h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.placeholder-chart {
+    background-color: #e9ecef;
+    border: 1px dashed #ced4da;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #adb5bd;
+    font-size: 16px;
+}
+
+.rectangle-chart {
+    height: 200px; /* 示例高度 */
+    position: relative;
+}
+.rectangle-chart::before, .rectangle-chart::after {
+    content: '';
+    position: absolute;
+    background-color: #ced4da;
+}
+.rectangle-chart::before {
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(20deg); /* 模拟斜线 */
+}
+.rectangle-chart::after {
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(-20deg); /* 模拟斜线 */
+}
+
+
+.large-widget {
+    flex-basis: 60%; /* 占据更大空间 */
+    display: flex;
+    justify-content: center; /* 水平居中圆形 */
+    align-items: flex-start; /* 垂直顶部对齐 */
+}
+
+.circle-chart {
+    width: 250px; /* 示例直径 */
+    height: 250px; /* 示例直径 */
+    border-radius: 50%;
+    margin-top: 20px; /* 与上方标题的间距 */
+}
+
+.tools-widget {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */ /* 移除，让h2左对齐 */
+}
+
+.tools-widget h2 {
+    align-self: flex-start; /* 确保标题在左侧 */
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px; /* 与标题的间距 */
+    justify-content: flex-start; /* 按钮靠左 */
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #007bff; /* 与图片一致的蓝色 */
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #0056b3; /* 与图片一致的蓝色悬停效果 */
+}
+
+/* 响应式调整，如果需要的话 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .widget-row {
+        flex-direction: column;
+    }
+    .large-widget {
+        align-items: center; /* 在小屏幕上居中圆形 */
+    }
+    .tools-widget {
+        align-items: center; /* 在小屏幕上居中工具 */
+    }
+    .tools-widget h2 {
+        align-self: center;
+    }
+    .buttons {
+        justify-content: center;
+    }
+}

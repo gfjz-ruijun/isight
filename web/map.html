@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iSight 舆情地图页</title>
+    <link rel="stylesheet" href="map_style.css">
+    <!-- 引入地图库的CSS (例如 Leaflet) - 根据实际使用的地图库调整 -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" /> -->
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="placeholder_logo.png" alt="iSight Logo"> <!-- 您可以将 placeholder_logo.png 替换为实际的logo路径 -->
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">仪表盘</a></li>
+                    <li class="active"><a href="#">舆情地图页</a></li>
+                    <li><a href="trends.html">情感趋势页</a></li>
+                    <li><a href="hot_topics.html">热点预测页</a></li>
+                    <li><a href="select_sentiment.html">选择舆情</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <header class="main-header">
+                <h1>舆情地图页</h1>
+            </header>
+            <div class="map-container-wrapper">
+                <div class="map-area">
+                    <div class="map-search-bar">
+                        <input type="text" placeholder="搜索位置、公交站和地铁站">
+                        <button class="search-button">🔍</button>
+                    </div>
+                    <div id="mapId" class="map-placeholder">
+                        <!-- 地图将在此处渲染 -->
+                        <p style="text-align: center; padding-top: 20%;">地图区域</p>
+                    </div>
+                    <div class="map-controls-bottom-right">
+                        <button class="map-control-btn" title="当前位置">📍</button>
+                        <button class="map-control-btn" title="放大">+</button>
+                        <button class="map-control-btn" title="缩小">-</button>
+                    </div>
+                </div>
+                <aside class="map-sidebar-right">
+                    <div class="layer-toggle">
+                        <h3>切换图层</h3>
+                        <div class="layer-options">
+                            <button class="layer-option active">情感分布</button>
+                            <button class="layer-option">话题密度</button>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </main>
+    </div>
+    <!-- 引入地图库的JS (例如 Leaflet) - 根据实际使用的地图库调整 -->
+    <!-- <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> -->
+    <script src="map_script.js" defer></script>
+</body>
+</html>

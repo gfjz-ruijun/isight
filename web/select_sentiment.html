@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iSight 选择舆情</title>
+    <link rel="stylesheet" href="select_sentiment_style.css">
+    <style>
+        /* 为此页面特定的布局添加内联样式 */
+        .select-sentiment-content {
+            display: flex;
+            gap: 30px; /* 主要内容区域左右两块的间距 */
+            padding-top: 20px;
+        }
+
+        .overview-section {
+            flex: 2; /* 左侧区域占据更多空间 */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .search-section {
+            flex: 1; /* 右侧区域 */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .search-input-container {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+        .search-input-container label {
+            font-size: 14px;
+            margin-bottom: 5px;
+            color: #555;
+            text-align: left;
+        }
+
+        .search-input-container input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .placeholder-rect {
+            background-color: #e9ecef; /* 浅灰色背景 */
+            border: 1px solid #ced4da; /* 浅边框 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden; /* 确保伪元素不溢出 */
+        }
+
+        .large-placeholder {
+            min-height: 400px; /* 较大的占位符高度 */
+            width: 100%;
+        }
+
+        .small-placeholder {
+            min-height: 250px; /* 较小的占位符高度 */
+            width: 100%;
+        }
+
+        /* 使用伪元素创建对角线 X */
+        .placeholder-rect::before,
+        .placeholder-rect::after {
+            content: '';
+            position: absolute;
+            background-color: #adb5bd; /* X 的颜色 */
+            height: 2px; /* X 的线条粗细 */
+        }
+
+        .placeholder-rect::before {
+            width: 120%; /* 确保线条足够长以覆盖对角线 */
+            top: 50%;
+            left: -10%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        .placeholder-rect::after {
+            width: 120%;
+            top: 50%;
+            left: -10%;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="placeholder_logo.png" alt="iSight Logo"> <!-- 替换为您的logo路径 -->
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">仪表盘</a></li>
+                    <li><a href="map.html">舆情地图页</a></li>
+                    <li><a href="trends.html">情感趋势页</a></li>
+                    <li><a href="hot_topics.html">热点预测页</a></li>
+                    <li class="active"><a href="#">选择舆情</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <header class="main-header">
+                <h1>选择舆情</h1>
+            </header>
+            <section class="select-sentiment-content">
+                <div class="overview-section">
+                    <h2 class="section-title">实时舆情概览</h2>
+                    <div class="placeholder-rect large-placeholder">
+                        <!-- 此处为后端插入内容的区域 -->
+                    </div>
+                </div>
+                <div class="search-section">
+                    <div class="search-input-container">
+                        <label for="sentimentSearch">舆情搜索</label>
+                        <input type="text" id="sentimentSearch" placeholder="请输入内容">
+                    </div>
+                    <div class="placeholder-rect small-placeholder">
+                        <!-- 此处为后端插入内容的区域 -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="select_sentiment_script.js" defer></script>
+</body>
+</html>

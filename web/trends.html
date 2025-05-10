@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iSight 情感趋势页</title>
+    <link rel="stylesheet" href="trends_style.css">
+    <!-- 如果使用图表库，例如 Chart.js, 在此引入 -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="placeholder_logo.png" alt="iSight Logo"> <!-- 替换为您的logo路径 -->
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">仪表盘</a></li>
+                    <li><a href="map.html">舆情地图页</a></li>
+                    <li class="active"><a href="#">情感趋势页</a></li>
+                    <li><a href="hot_topics.html">热点预测页</a></li>
+                    <li><a href="select_sentiment.html">选择舆情</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <header class="main-header">
+                <h1>情感趋势页</h1>
+            </header>
+            <section class="trends-content-wrapper">
+                <div class="chart-container">
+                    <div class="chart-header">
+                        <h2>情感趋势</h2>
+                        <div class="legend">
+                            <span><span class="legend-color-dot" style="background-color: #5470c6;"></span> 高兴</span>
+                            <span><span class="legend-color-dot" style="background-color: #91cc75;"></span> 生气</span>
+                            <span><span class="legend-color-dot" style="background-color: #fac858;"></span> 平和</span>
+                            <!-- 根据实际图表库和数据调整颜色和文本 -->
+                        </div>
+                    </div>
+                    <div class="chart-placeholder-area">
+                        <!-- 图表区域，根据要求暂时留空 -->
+                        <!-- <canvas id="sentimentTrendChart"></canvas> -->
+                        <!-- <p style="text-align:center; display:none;" id="chartFallbackText">情感趋势图表区域</p> -->
+                        <p style="text-align:center; padding: 20px;">图表区域已留空</p>
+                    </div>
+                </div>
+                <aside class="controls-sidebar">
+                    <h3>时间粒度切换</h3>
+                    <select id="timeGranularitySelector">
+                        <option value="hour">小时</option>
+                        <option value="day">天</option>
+                        <option value="week">周</option>
+                    </select>
+                </aside>
+            </section>
+        </main>
+    </div>
+    <script src="trends_script.js" defer></script>
+</body>
+</html>

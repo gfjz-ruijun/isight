@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iSight 热点预测页</title>
+    <link rel="stylesheet" href="hot_topics_style.css">
+    <style>
+        /* Inline styles for layout specific to this page, as hot_topics_style.css is a copy of style.css */
+        .prediction-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px; /* Space between rows */
+            align-items: center; /* Center rows if they don't fill width */
+        }
+        .prediction-row {
+            display: flex;
+            justify-content: center; /* Center items in a row */
+            gap: 50px; /* Space between items in a row */
+            width: 100%;
+        }
+        .prediction-item {
+            text-align: center;
+            width: 150px; /* Approximate width for items */
+        }
+        .prediction-item h3 {
+            font-size: 16px; /* Match image font style */
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+        .placeholder-box {
+            width: 100px;
+            height: 100px;
+            background-color: #e9ecef; /* Light grey background */
+            border: 1px solid #ced4da; /* Light border */
+            margin: 0 auto; /* Center box under title */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        /* Simple X using pseudo-elements */
+        .placeholder-box::before,
+        .placeholder-box::after {
+            content: '';
+            position: absolute;
+            background-color: #adb5bd; /* Grey color for X */
+            width: 70%;
+            height: 2px;
+        }
+        .placeholder-box::before {
+            transform: rotate(45deg);
+        }
+        .placeholder-box::after {
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="placeholder_logo.png" alt="iSight Logo"> <!-- Replace with your logo path -->
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">仪表盘</a></li>
+                    <li><a href="map.html">舆情地图页</a></li>
+                    <li><a href="trends.html">情感趋势页</a></li>
+                    <li class="active"><a href="#">热点预测页</a></li>
+                    <li><a href="select_sentiment.html">选择舆情</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <header class="main-header">
+                <h1>热点预测页</h1>
+            </header>
+            <section class="prediction-content">
+                <div class="prediction-row">
+                    <div class="prediction-item">
+                        <h3>传播速度</h3>
+                        <div class="placeholder-box"></div>
+                    </div>
+                    <div class="prediction-item">
+                        <h3>情感强度</h3>
+                        <div class="placeholder-box"></div>
+                    </div>
+                    <div class="prediction-item">
+                        <h3>地域覆盖</h3>
+                        <div class="placeholder-box"></div>
+                    </div>
+                </div>
+                <div class="prediction-row">
+                    <div class="prediction-item">
+                        <h3>关联事件数</h3>
+                        <div class="placeholder-box"></div>
+                    </div>
+                    <div class="prediction-item">
+                        <h3>历史相似度</h3>
+                        <div class="placeholder-box"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="hot_topics_script.js" defer></script>
+</body>
+</html>

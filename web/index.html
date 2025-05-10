@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iSight 仪表盘</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="placeholder_logo.png" alt="iSight Logo">
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li class="active"><a href="#">仪表盘</a></li>
+                    <li><a href="map.html">舆情地图页</a></li>
+                    <li><a href="trends.html">情感趋势页</a></li>
+                    <li><a href="hot_topics.html">热点预测页</a></li>
+                    <li><a href="select_sentiment.html">选择舆情</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <header class="main-header">
+                <h1>仪表盘</h1>
+            </header>
+            <section class="dashboard-widgets">
+                <div class="widget-row">
+                    <div class="widget">
+                        <h2>实时舆情概览</h2>
+                        <!-- <div class="placeholder-chart rectangle-chart"></div> -->
+                    </div>
+                    <div class="widget">
+                        <h2>热点话题TOP5</h2>
+                        <!-- <div class="placeholder-chart rectangle-chart"></div> -->
+                    </div>
+                </div>
+                <div class="widget-row">
+                    <div class="widget large-widget">
+                        <!-- <div class="placeholder-chart circle-chart"></div> -->
+                    </div>
+                    <div class="widget tools-widget">
+                        <h2>快速分析工具</h2>
+                        <div class="buttons">
+                            <button class="btn btn-primary">一键生成简报</button>
+                            <button class="btn btn-secondary">导出当前数据</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>
